@@ -7,8 +7,8 @@ const Discord = require('discord.js');
 const messageHandler = require('./handlers/message');
 
 const client = new Discord.Client({
-    messageCacheLifetime: 15,
-    messageSweepInterval: 15,
+    messageCacheLifetime: 1800,
+    messageSweepInterval: 900,
     disabledEvents: [
         'CHANNEL_CREATE',
         'CHANNEL_UPDATE',
