@@ -44,7 +44,7 @@ function message(message)   {
             res
         ])
     }).then(([res, old]) => {
-        if(!res.query || res.query.pages) return Promise.reject('no data: ' + res.toString());
+        if(!res.query || !res.query.pages) return Promise.reject('no data: ' + res.toString());
 
         const first = res.query.pages[Object.keys(res.query.pages)[0]];
         let out = `**__${first.title}__**\n${first.extract}\n*<${old[3][0]}>*`;
