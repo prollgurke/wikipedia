@@ -27,6 +27,7 @@ function message(message)   {
             namespace: '*'
         }
     }).then(res => {
+        if(!res[1][0]) return Promise.reject('no title');
         return Promise.all([
             request({
                 qs: {
