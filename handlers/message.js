@@ -16,7 +16,7 @@ request = request.defaults({
 });
 
 function message(message)   {
-    if(!message.content.startsWith(`<@${process.env.DISCORD_CLIENT_ID}`) && !message.content.startsWith(`<@!${process.env.DISCORD_CLIENT_ID}`)) return;
+    if(!message.content.startsWith(`<@${process.env.DISCORD_CLIENT_ID}`) && !message.content.startsWith(`<@!${process.env.DISCORD_CLIENT_ID}`) && !message.content.startsWith('wiki ') && !message.content.startsWith('wiki, ')) return;
     request({
         qs: {
             search: message.content.split(' ').slice(1).join(' '),
