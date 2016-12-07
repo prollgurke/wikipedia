@@ -2,7 +2,9 @@
  * Created by Will on 12/6/2016.
  */
 
-require('dotenv').config();
+require('dotenv').config({
+    silent: true
+});
 const Discord = require('discord.js');
 const messageHandler = require('./handlers/message');
 
