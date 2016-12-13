@@ -10,7 +10,7 @@ const messageHandler = require('./handlers/message');
 
 const client = new Discord.Client({
     messageCacheLifetime: 1800,
-    messageSweepInterval: 900,
+    messageSweepInterval: 900/*,
     disabledEvents: [
         'CHANNEL_CREATE',
         'CHANNEL_UPDATE',
@@ -48,7 +48,7 @@ const client = new Discord.Client({
         'USER_UPDATE',
         'VOICE_STATE_UPDATE',
         'WARN'
-    ]
+    ]*/
 });
 client.on('message', messageHandler);
 client.on('ready', () => console.log('ready'));
