@@ -4,7 +4,7 @@
 
 let request = require('request-promise-native');
 request = request.defaults({
-    uri: 'https://en.wikipedia.org/w/api.php',
+    uri: 'https://de.wikipedia.org/w/api.php',
     method: 'get',
     qs: {
         format: 'json'
